@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="http://smtpjs.com/v3/smtp.js"></script>
+
+    <style>
+        body
+        {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        ::-webkit-scrollbar
+        {
+            width: 0;
+        }
+
+        .signup
+        {
+            width: 100%;
+            height: 760px;
+            background-image: url('newimg/bg.jpg');
+            background-size: cover;
+            background-position-y: -100px;
+        }
+
+        .small_text
+        {
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 30px;
+            letter-spacing: 2px;
+            font-weight: 500;
+            margin: 0;
+            color: black;
+            margin: 25px 20px;
+            background-color: transparent;
+            border: 0;
+            border-bottom: 3px solid black;
+            position: relative;
+            color:white
+        }
+
+        .small_text:focus
+        {
+            outline: none;
+        }
+        .big_text
+        {
+            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-size: 80px;
+            letter-spacing: 1px;
+            font-weight: 500;
+            margin: 0;
+            color: rgb(39, 114, 180);
+            text-align: center;
+            padding: 200px 0px 230px 0px;
+        
+        }
+
+        .btn
+        {
+            padding: 20px 50px;
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 20px;
+            letter-spacing: 2px;
+            font-weight: 600;
+            float: right;
+            margin-right: 50px;
+            border: none;
+            background-color: white;
+        }
+
+        .btn:active
+        {
+            background-color: black;
+            color: white;
+        }
+
+        form
+        {
+            padding: 100px 100px;
+            padding-top: 300px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="signup">
+        <form onclick="MyFunction(event)"> 
+        <input type="text" id="name" placeholder="First Name" class="small_text">
+        <br>
+        <input type="email" id="email" placeholder="Email" class="small_text">
+        <br>
+        <input type="password" id="password" placeholder="Password" class="small_text">
+        <br>
+        <input type="tel" id="mobile" placeholder="Mobile Number" class="small_text">
+
+       
+        <button type="button"  class="btn">Sign Up</button>
+       </form>
+    
+  <script type="text/javascript">
+    function MyFunction(event) 
+      {
+         event.preventDefault();
+         var f_name = document.getElementById("name").value ;
+         var email = document.getElementById("email").value ;
+         var pass = document.getElementById("password").value ;
+         var Mobile = document.getElementById("mobile").value;
+    
+         localStorage.setItem('first_name', f_name) ;
+         localStorage.setItem('Email', email) ;
+         localStorage.setItem('Password',pass);
+         localStorage.setItem('Mobile ', Mobile) ;
+    }
+
+
+    </script>
+</div>
+</body>
+</html>
